@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="98d7aaa6-fbb9-4d7a-8b4b-681aa4465f9a" activeEnvironment="Default" name="FetchCountryDetails_PropertySOAP" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="df723c32-28bc-4b6c-a137-f22c8b40cdeb" wsaVersion="NONE" name="GetDetailsSoapBinding" type="wsdl" bindingName="{http://mypack}GetDetailsSoapBinding" soapVersion="1_1" anonymous="optional" definition="https://webapps.tekstac.com/WebserviceX/services/GetDetails?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://webapps.tekstac.com/WebserviceX/services/GetDetails?wsdl"><con:part><con:url>https://webapps.tekstac.com/WebserviceX/services/GetDetails?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://mypack" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://mypack" xmlns:intf="http://mypack" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+  <wsdl:types>
+    <schema elementFormDefault="qualified" targetNamespace="http://mypack" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="getInfo">
+        <complexType/>
+      </element>
+      <element name="getInfoResponse">
+        <complexType>
+          <sequence>
+            <element name="getInfoReturn" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="getCurrencyCodeByCurrencyName">
+        <complexType>
+          <sequence>
+            <element name="currency_name" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="getCurrencyCodeByCurrencyNameResponse">
+        <complexType>
+          <sequence>
+            <element name="getCurrencyCodeByCurrencyNameReturn" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="getCountryByCurrencyCode">
+        <complexType>
+          <sequence>
+            <element name="currencycode" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="getCountryByCurrencyCodeResponse">
+        <complexType>
+          <sequence>
+            <element name="getCountryByCurrencyCodeReturn" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="getCountryByCountryCode">
+        <complexType>
+          <sequence>
+            <element name="countrycode" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="getCountryByCountryCodeResponse">
+        <complexType>
+          <sequence>
+            <element name="getCountryByCountryCodeReturn" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="getCurrencyByCountry">
+        <complexType>
+          <sequence>
+            <element name="country_name" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="getCurrencyByCountryResponse">
+        <complexType>
+          <sequence>
+            <element name="getCurrencyByCountryReturn" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="getCurrencyCodeByCurrencyNameResponse">
+    <wsdl:part element="impl:getCurrencyCodeByCurrencyNameResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getInfoResponse">
+    <wsdl:part element="impl:getInfoResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCountryByCountryCodeResponse">
+    <wsdl:part element="impl:getCountryByCountryCodeResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCountryByCurrencyCodeRequest">
+    <wsdl:part element="impl:getCountryByCurrencyCode" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getInfoRequest">
+    <wsdl:part element="impl:getInfo" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCurrencyByCountryResponse">
+    <wsdl:part element="impl:getCurrencyByCountryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCurrencyCodeByCurrencyNameRequest">
+    <wsdl:part element="impl:getCurrencyCodeByCurrencyName" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCountryByCountryCodeRequest">
+    <wsdl:part element="impl:getCountryByCountryCode" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCountryByCurrencyCodeResponse">
+    <wsdl:part element="impl:getCountryByCurrencyCodeResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCurrencyByCountryRequest">
+    <wsdl:part element="impl:getCurrencyByCountry" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="GetDetails">
+    <wsdl:operation name="getInfo">
+      <wsdl:input message="impl:getInfoRequest" name="getInfoRequest"></wsdl:input>
+      <wsdl:output message="impl:getInfoResponse" name="getInfoResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrencyCodeByCurrencyName">
+      <wsdl:input message="impl:getCurrencyCodeByCurrencyNameRequest" name="getCurrencyCodeByCurrencyNameRequest"></wsdl:input>
+      <wsdl:output message="impl:getCurrencyCodeByCurrencyNameResponse" name="getCurrencyCodeByCurrencyNameResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountryByCurrencyCode">
+      <wsdl:input message="impl:getCountryByCurrencyCodeRequest" name="getCountryByCurrencyCodeRequest"></wsdl:input>
+      <wsdl:output message="impl:getCountryByCurrencyCodeResponse" name="getCountryByCurrencyCodeResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountryByCountryCode">
+      <wsdl:input message="impl:getCountryByCountryCodeRequest" name="getCountryByCountryCodeRequest"></wsdl:input>
+      <wsdl:output message="impl:getCountryByCountryCodeResponse" name="getCountryByCountryCodeResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrencyByCountry">
+      <wsdl:input message="impl:getCurrencyByCountryRequest" name="getCurrencyByCountryRequest"></wsdl:input>
+      <wsdl:output message="impl:getCurrencyByCountryResponse" name="getCurrencyByCountryResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetDetailsSoapBinding" type="impl:GetDetails">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getInfo">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getInfoRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getInfoResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrencyCodeByCurrencyName">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getCurrencyCodeByCurrencyNameRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCurrencyCodeByCurrencyNameResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountryByCurrencyCode">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getCountryByCurrencyCodeRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCountryByCurrencyCodeResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountryByCountryCode">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getCountryByCountryCodeRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCountryByCountryCodeResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrencyByCountry">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getCurrencyByCountryRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCurrencyByCountryResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetDetailsService">
+    <wsdl:port binding="impl:GetDetailsSoapBinding" name="GetDetails">
+      <wsdlsoap:address location="https://webapps.tekstac.com/WebserviceX/services/GetDetails"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://webapps.tekstac.com/WebserviceX/services/GetDetails</con:endpoint></con:endpoints><con:operation id="02bd392e-bfe7-4727-af22-aa6a8e9b5527" isOneWay="false" action="" name="getCountryByCountryCode" bindingOperationName="getCountryByCountryCode" type="Request-Response" outputName="getCountryByCountryCodeResponse" inputName="getCountryByCountryCodeRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="18eaae2d-5ef1-455d-879b-3282e30d52b6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/WebserviceX/services/GetDetails</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:getCountryByCountryCode>\r
+         <myp:countrycode>?</myp:countrycode>\r
+      </myp:getCountryByCountryCode>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/GetDetails/getCountryByCountryCodeRequest"/></con:call></con:operation><con:operation id="afd72587-1de2-4f7f-90bf-29b6f6fdd741" isOneWay="false" action="" name="getCountryByCurrencyCode" bindingOperationName="getCountryByCurrencyCode" type="Request-Response" outputName="getCountryByCurrencyCodeResponse" inputName="getCountryByCurrencyCodeRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="964167f1-21a5-487b-b14c-56c47bed3a89" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/WebserviceX/services/GetDetails</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:getCountryByCurrencyCode>\r
+         <myp:currencycode>?</myp:currencycode>\r
+      </myp:getCountryByCurrencyCode>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/GetDetails/getCountryByCurrencyCodeRequest"/></con:call></con:operation><con:operation id="0eaf54b7-0e39-46c8-85fd-3a42cc63ce76" isOneWay="false" action="" name="getCurrencyByCountry" bindingOperationName="getCurrencyByCountry" type="Request-Response" outputName="getCurrencyByCountryResponse" inputName="getCurrencyByCountryRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bfbe9c42-a5f3-4793-ab50-b76a73f514ad" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/WebserviceX/services/GetDetails</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:getCurrencyByCountry>\r
+         <myp:country_name>?</myp:country_name>\r
+      </myp:getCurrencyByCountry>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/GetDetails/getCurrencyByCountryRequest"/></con:call></con:operation><con:operation id="5631fd23-47d7-472e-9537-ebd444da212d" isOneWay="false" action="" name="getCurrencyCodeByCurrencyName" bindingOperationName="getCurrencyCodeByCurrencyName" type="Request-Response" outputName="getCurrencyCodeByCurrencyNameResponse" inputName="getCurrencyCodeByCurrencyNameRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="42b5263a-35d9-45fd-bfd2-709c1dbe9045" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/WebserviceX/services/GetDetails</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:getCurrencyCodeByCurrencyName>\r
+         <myp:currency_name>?</myp:currency_name>\r
+      </myp:getCurrencyCodeByCurrencyName>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/GetDetails/getCurrencyCodeByCurrencyNameRequest"/></con:call></con:operation><con:operation id="5d835125-2c53-49b7-95da-d074bf010170" isOneWay="false" action="" name="getInfo" bindingOperationName="getInfo" type="Request-Response" outputName="getInfoResponse" inputName="getInfoRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2e2f2861-583d-413d-948d-d8a1d30ce6bd" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/WebserviceX/services/GetDetails</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:getInfo/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/GetDetails/getInfoRequest"/></con:call></con:operation></con:interface><con:testSuite id="e159e285-2840-42d7-9e29-b8b03ff99cda" name="PropertyTestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="c7efdd6a-6568-4424-bb51-b1821893b0f3" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="PropertyTestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="54faaecc-2606-4dd3-8f6a-92b4f173083e" name="GlobalParameterStep1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDetailsSoapBinding</con:interface><con:operation>getCountryByCountryCode</con:operation><con:request name="GlobalParameterStep1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="bf10f004-3125-4b81-9318-863eeaf8c2bd"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/WebserviceX/services/GetDetails</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:getCountryByCountryCode>\r
+         <myp:countrycode>${#Project#Country_Code1}</myp:countrycode>\r
+      </myp:getCountryByCountryCode>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="02a56eeb-aa20-4c67-9ba4-f134788e98ee" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/GetDetails/getCountryByCountryCodeRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="207cd509-d09c-4c0c-b26c-1b9395549489" name="GlobalParameterStep2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDetailsSoapBinding</con:interface><con:operation>getCountryByCountryCode</con:operation><con:request name="GlobalParameterStep2" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="5309b26c-d1a5-4e34-8601-2320ec2b10fc"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/WebserviceX/services/GetDetails</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:getCountryByCountryCode>\r
+         <myp:countrycode>${#Project#Country_Code2}</myp:countrycode>\r
+      </myp:getCountryByCountryCode>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="2671fe50-7afd-4734-b99d-1d0e6feece75" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/GetDetails/getCountryByCountryCodeRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="c90fcaa0-d158-40da-a420-3be11aa2bf2b" name="TestSuiteParameterStep1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDetailsSoapBinding</con:interface><con:operation>getCountryByCurrencyCode</con:operation><con:request name="TestSuiteParameterStep1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="fb1e94ca-1782-48e2-ba13-f37ea67f4614"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/WebserviceX/services/GetDetails</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:getCountryByCurrencyCode>\r
+         <myp:currencycode>${#TestSuite#Currency_Code1}</myp:currencycode>\r
+      </myp:getCountryByCurrencyCode>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="53b7f15d-6ed2-435c-af65-26b60e41d055" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/GetDetails/getCountryByCurrencyCodeRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="cd96a9ce-bf3d-4913-9935-e3ab0c4259a7" name="TestSuiteParameterStep2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDetailsSoapBinding</con:interface><con:operation>getCountryByCurrencyCode</con:operation><con:request name="TestSuiteParameterStep2" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="531f1120-b8e8-4aaf-82fb-48ebd5cce6fb"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/WebserviceX/services/GetDetails</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:getCountryByCurrencyCode>\r
+         <myp:currencycode>${#TestSuite#Currency_Code2}</myp:currencycode>\r
+      </myp:getCountryByCurrencyCode>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="3ed03a06-0966-4e6a-b610-88369dab3fdf" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/GetDetails/getCountryByCurrencyCodeRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="ee10327e-16ab-4d76-87ff-1a73f365f44d" name="TestCaseParameterStep1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDetailsSoapBinding</con:interface><con:operation>getCurrencyByCountry</con:operation><con:request name="TestCaseParameterStep1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="bc85858c-2ae8-4945-95f0-ffe39324b55f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/WebserviceX/services/GetDetails</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:getCurrencyByCountry>\r
+         <myp:country_name>${#TestCase#Country_Name1}</myp:country_name>\r
+      </myp:getCurrencyByCountry>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="8bba6bb2-24c9-4673-96ff-20ce78c8f4ef" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/GetDetails/getCurrencyByCountryRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="f0976eed-4d8c-4c79-9d90-6c9e0c5600bd" name="TestCaseParameterStep2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDetailsSoapBinding</con:interface><con:operation>getCurrencyByCountry</con:operation><con:request name="TestCaseParameterStep2" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8c5234cd-c1b2-4dca-a719-ea52ccbcb582"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/WebserviceX/services/GetDetails</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:getCurrencyByCountry>\r
+         <myp:country_name>${#TestCase#Country_Name2}</myp:country_name>\r
+      </myp:getCurrencyByCountry>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="bbed4f7d-0fe9-4a8b-99c0-3f0f32bce208" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/GetDetails/getCurrencyByCountryRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="properties" name="Properties" id="16196e1b-f6fd-443c-9e27-cad64cb3757e"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>Currency_Name1</con:name><con:value>Rupee</con:value></con:property><con:property><con:name>Currency_Name2</con:name><con:value>Yen</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" id="396913db-e74b-4844-8079-65404f492a19" name="TestStepParameterStep1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDetailsSoapBinding</con:interface><con:operation>getCurrencyCodeByCurrencyName</con:operation><con:request name="TestStepParameterStep1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="391adec8-132f-4927-9d0c-aa0dc951fe97"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/WebserviceX/services/GetDetails</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:getCurrencyCodeByCurrencyName>\r
+         <myp:currency_name>${Properties#Currency_Name1}</myp:currency_name>\r
+      </myp:getCurrencyCodeByCurrencyName>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="82584437-dea8-4e02-ad79-5d4bc8dae191" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/GetDetails/getCurrencyCodeByCurrencyNameRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="6409fabe-dd7d-430e-9909-f91db45916f4" name="TestStepParameterStep2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDetailsSoapBinding</con:interface><con:operation>getCurrencyCodeByCurrencyName</con:operation><con:request name="TestStepParameterStep2" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="83dbd916-0837-4bc2-836d-307c4eeac1f6"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/WebserviceX/services/GetDetails</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:getCurrencyCodeByCurrencyName>\r
+         <myp:currency_name>${Properties#Currency_Name2}</myp:currency_name>\r
+      </myp:getCurrencyCodeByCurrencyName>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="12735640-d971-429f-91b5-37b11b00e7dc" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/GetDetails/getCurrencyCodeByCurrencyNameRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>Country_Name1</con:name><con:value>France</con:value></con:property><con:property><con:name>Country_Name2</con:name><con:value>China</con:value></con:property></con:properties></con:testCase><con:properties><con:property><con:name>Currency_Code1</con:name><con:value>INR</con:value></con:property><con:property><con:name>Currency_Code2</con:name><con:value>USD</con:value></con:property></con:properties></con:testSuite><con:properties><con:property><con:name>Country_Code1</con:name><con:value>IN</con:value></con:property><con:property><con:name>Country_Code2</con:name><con:value>JP</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

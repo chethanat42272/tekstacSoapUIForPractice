@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="ad3f07f2-b833-48a9-a284-80d672ffe4aa" activeEnvironment="Default" name="CurrencyConverter_4" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="299275a7-1aaf-465f-bf84-e013cb084ab1" wsaVersion="NONE" name="CurrencyConvertorSoapBinding" type="wsdl" bindingName="{http://currency}CurrencyConvertorSoapBinding" soapVersion="1_1" anonymous="optional" definition="https://webapps.tekstac.com/CurrencySoapWebservice/services/CurrencyConvertor?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://webapps.tekstac.com/CurrencySoapWebservice/services/CurrencyConvertor?wsdl"><con:part><con:url>https://webapps.tekstac.com/CurrencySoapWebservice/services/CurrencyConvertor?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://currency" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://currency" xmlns:intf="http://currency" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+  <wsdl:types>
+    <schema elementFormDefault="qualified" targetNamespace="http://currency" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="showCurrencyValueInRupees">
+        <complexType>
+          <sequence>
+            <element name="country" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="showCurrencyValueInRupeesResponse">
+        <complexType>
+          <sequence>
+            <element name="showCurrencyValueInRupeesReturn" type="xsd:double"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="showCurrency">
+        <complexType>
+          <sequence>
+            <element name="country" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="showCurrencyResponse">
+        <complexType>
+          <sequence>
+            <element name="showCurrencyReturn" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="convertToRupees">
+        <complexType>
+          <sequence>
+            <element name="country" type="xsd:string"/>
+            <element name="amount" type="xsd:double"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="convertToRupeesResponse">
+        <complexType>
+          <sequence>
+            <element name="convertToRupeesReturn" type="xsd:double"/>
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="showCurrencyResponse">
+    <wsdl:part element="impl:showCurrencyResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="showCurrencyRequest">
+    <wsdl:part element="impl:showCurrency" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="convertToRupeesResponse">
+    <wsdl:part element="impl:convertToRupeesResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="showCurrencyValueInRupeesResponse">
+    <wsdl:part element="impl:showCurrencyValueInRupeesResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="convertToRupeesRequest">
+    <wsdl:part element="impl:convertToRupees" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="showCurrencyValueInRupeesRequest">
+    <wsdl:part element="impl:showCurrencyValueInRupees" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CurrencyConvertor">
+    <wsdl:operation name="showCurrencyValueInRupees">
+      <wsdl:input message="impl:showCurrencyValueInRupeesRequest" name="showCurrencyValueInRupeesRequest"></wsdl:input>
+      <wsdl:output message="impl:showCurrencyValueInRupeesResponse" name="showCurrencyValueInRupeesResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showCurrency">
+      <wsdl:input message="impl:showCurrencyRequest" name="showCurrencyRequest"></wsdl:input>
+      <wsdl:output message="impl:showCurrencyResponse" name="showCurrencyResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="convertToRupees">
+      <wsdl:input message="impl:convertToRupeesRequest" name="convertToRupeesRequest"></wsdl:input>
+      <wsdl:output message="impl:convertToRupeesResponse" name="convertToRupeesResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CurrencyConvertorSoapBinding" type="impl:CurrencyConvertor">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="showCurrencyValueInRupees">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="showCurrencyValueInRupeesRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="showCurrencyValueInRupeesResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showCurrency">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="showCurrencyRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="showCurrencyResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="convertToRupees">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="convertToRupeesRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="convertToRupeesResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CurrencyConvertorService">
+    <wsdl:port binding="impl:CurrencyConvertorSoapBinding" name="CurrencyConvertor">
+      <wsdlsoap:address location="https://webapps.tekstac.com/CurrencySoapWebservice/services/CurrencyConvertor"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://webapps.tekstac.com/CurrencySoapWebservice/services/CurrencyConvertor</con:endpoint></con:endpoints><con:operation id="c08b257a-73ca-4f69-8ff9-463b6d74f724" isOneWay="false" action="" name="convertToRupees" bindingOperationName="convertToRupees" type="Request-Response" outputName="convertToRupeesResponse" inputName="convertToRupeesRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e93129c6-79c6-4497-b9ba-23cee51f6e7c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/CurrencySoapWebservice/services/CurrencyConvertor</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cur="http://currency">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <cur:convertToRupees>\r
+         <cur:country>?</cur:country>\r
+         <cur:amount>?</cur:amount>\r
+      </cur:convertToRupees>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://currency/CurrencyConvertor/convertToRupeesRequest"/></con:call></con:operation><con:operation id="a5c740e5-0a8d-4919-927c-1189187ae1e0" isOneWay="false" action="" name="showCurrency" bindingOperationName="showCurrency" type="Request-Response" outputName="showCurrencyResponse" inputName="showCurrencyRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9ba9cf7b-3b47-4b2c-a223-2a57d320f8a7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/CurrencySoapWebservice/services/CurrencyConvertor</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cur="http://currency">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <cur:showCurrency>\r
+         <cur:country>?</cur:country>\r
+      </cur:showCurrency>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://currency/CurrencyConvertor/showCurrencyRequest"/></con:call></con:operation><con:operation id="2f007bcc-99a1-40fa-96b6-6452ea09891c" isOneWay="false" action="" name="showCurrencyValueInRupees" bindingOperationName="showCurrencyValueInRupees" type="Request-Response" outputName="showCurrencyValueInRupeesResponse" inputName="showCurrencyValueInRupeesRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6d561c1c-36f3-499a-8c7e-9cad23aae0e4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/CurrencySoapWebservice/services/CurrencyConvertor</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cur="http://currency">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <cur:showCurrencyValueInRupees>\r
+         <cur:country>?</cur:country>\r
+      </cur:showCurrencyValueInRupees>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://currency/CurrencyConvertor/showCurrencyValueInRupeesRequest"/></con:call></con:operation></con:interface><con:testSuite id="f7f90cad-57ea-47f1-a5a0-248ba8cb62a7" name="CC1_TS4"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="d70372c9-3d7a-4459-8b5c-1027b473a24b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CC1_TC4" searchProperties="true"><con:settings/><con:testStep type="request" id="df4141c8-33bf-41b9-b9f9-96e096f5c5ff" name="showCurrency"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CurrencyConvertorSoapBinding</con:interface><con:operation>showCurrency</con:operation><con:request name="showCurrency" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="eaad4929-b631-4ad7-bbd7-88b9a47b1b93"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/CurrencySoapWebservice/services/CurrencyConvertor</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cur="http://currency">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <cur:showCurrency>\r
+         <cur:country>${#Project#country}</cur:country>\r
+      </cur:showCurrency>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="368f56d8-860c-4a7e-83e5-6d5f408c7c55" name="SOAP Response"/><con:assertion type="XPath Match" id="2563ace5-7eb2-4c60-9b77-62f446307f63" name="XPath Match"><con:configuration><path>declare namespace ns1='http://currency';
+declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+//*:showCurrencyReturn</path><content>Yuan</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://currency/CurrencyConvertor/showCurrencyRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>country</con:name><con:value>China</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

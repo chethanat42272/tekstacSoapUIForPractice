@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="517c94f3-9f1a-4952-92bd-f7467989a88d" activeEnvironment="Default" name="UnitConversion_PropertySOAP" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="3911b24d-1dcf-4179-83cf-20416ad07253" wsaVersion="NONE" name="ConversionServiceImplSoapBinding" type="wsdl" bindingName="{http://mypack}ConversionServiceImplSoapBinding" soapVersion="1_1" anonymous="optional" definition="https://webapps.tekstac.com/UnitConversion/services/ConversionServiceImpl?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://webapps.tekstac.com/UnitConversion/services/ConversionServiceImpl?wsdl"><con:part><con:url>https://webapps.tekstac.com/UnitConversion/services/ConversionServiceImpl?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://mypack" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://mypack" xmlns:intf="http://mypack" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+  <wsdl:types>
+    <schema elementFormDefault="qualified" targetNamespace="http://mypack" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="convert">
+        <complexType>
+          <sequence>
+            <element name="fromUnit" type="xsd:string"/>
+            <element name="toUnit" type="xsd:string"/>
+            <element name="value" type="xsd:double"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="convertResponse">
+        <complexType>
+          <sequence>
+            <element name="convertReturn" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="getUnits">
+        <complexType/>
+      </element>
+      <element name="getUnitsResponse">
+        <complexType>
+          <sequence>
+            <element maxOccurs="unbounded" name="getUnitsReturn" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="getUnitsResponse">
+    <wsdl:part element="impl:getUnitsResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="convertResponse">
+    <wsdl:part element="impl:convertResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="convertRequest">
+    <wsdl:part element="impl:convert" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUnitsRequest">
+    <wsdl:part element="impl:getUnits" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ConversionServiceImpl">
+    <wsdl:operation name="convert">
+      <wsdl:input message="impl:convertRequest" name="convertRequest"></wsdl:input>
+      <wsdl:output message="impl:convertResponse" name="convertResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUnits">
+      <wsdl:input message="impl:getUnitsRequest" name="getUnitsRequest"></wsdl:input>
+      <wsdl:output message="impl:getUnitsResponse" name="getUnitsResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ConversionServiceImplSoapBinding" type="impl:ConversionServiceImpl">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="convert">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="convertRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="convertResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUnits">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getUnitsRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getUnitsResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConversionServiceImplService">
+    <wsdl:port binding="impl:ConversionServiceImplSoapBinding" name="ConversionServiceImpl">
+      <wsdlsoap:address location="https://webapps.tekstac.com/UnitConversion/services/ConversionServiceImpl"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://webapps.tekstac.com/UnitConversion/services/ConversionServiceImpl</con:endpoint></con:endpoints><con:operation id="214e83f4-7922-4fef-b5df-953534c6de76" isOneWay="false" action="" name="convert" bindingOperationName="convert" type="Request-Response" outputName="convertResponse" inputName="convertRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="96066a14-37be-479a-aea0-a32c1e971a4a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/UnitConversion/services/ConversionServiceImpl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:convert>\r
+         <myp:fromUnit>?</myp:fromUnit>\r
+         <myp:toUnit>?</myp:toUnit>\r
+         <myp:value>?</myp:value>\r
+      </myp:convert>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/ConversionServiceImpl/convertRequest"/></con:call></con:operation><con:operation id="c050a098-1856-4375-a2a6-8ae46429b9db" isOneWay="false" action="" name="getUnits" bindingOperationName="getUnits" type="Request-Response" outputName="getUnitsResponse" inputName="getUnitsRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b2b5d312-f721-4b32-b5e2-47678aa94ce8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/UnitConversion/services/ConversionServiceImpl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:getUnits/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/ConversionServiceImpl/getUnitsRequest"/></con:call></con:operation></con:interface><con:testSuite id="eadcf5d2-44f4-4be2-9ea1-9b7bfaf5a971" name="PropertyTestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="2135380f-446d-4b43-b44a-888e960efdb6" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="PropertyTestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="21770c27-d470-4123-b693-e5bc6d479547" name="GlobalParameterStep1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ConversionServiceImplSoapBinding</con:interface><con:operation>convert</con:operation><con:request name="GlobalParameterStep1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="0bc68c28-7e15-44d8-bcab-af0c04d47899"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/UnitConversion/services/ConversionServiceImpl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:convert>\r
+         <myp:fromUnit>${#Project#fromUnit_1 }</myp:fromUnit>\r
+         <myp:toUnit>${#Project#toUnit_1}</myp:toUnit>\r
+         <myp:value>${#Project#value_1}</myp:value>\r
+      </myp:convert>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="853abe88-4b3e-4244-b0e6-e55e000b1ea5" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/ConversionServiceImpl/convertRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="432f02d0-a95c-4256-9ac0-5d7de4e6f377" name="GlobalParameterStep2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ConversionServiceImplSoapBinding</con:interface><con:operation>convert</con:operation><con:request name="GlobalParameterStep2" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="0bc68c28-7e15-44d8-bcab-af0c04d47899"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/UnitConversion/services/ConversionServiceImpl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:convert>\r
+         <myp:fromUnit>${#Project#fromUnit_2}</myp:fromUnit>\r
+         <myp:toUnit>${#Project#toUnit_2}</myp:toUnit>\r
+         <myp:value>${#Project#value_2}</myp:value>\r
+      </myp:convert>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="853abe88-4b3e-4244-b0e6-e55e000b1ea5" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/ConversionServiceImpl/convertRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="3fdc183d-c5d3-4255-aa50-0ca67b06c0e2" name="TestSuiteParameterStep1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ConversionServiceImplSoapBinding</con:interface><con:operation>convert</con:operation><con:request name="TestSuiteParameterStep1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="93b9f3f9-e28b-456b-bc13-cc3a93527b35"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/UnitConversion/services/ConversionServiceImpl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:convert>\r
+         <myp:fromUnit>${#TestSuite#fromUnit_1}</myp:fromUnit>\r
+         <myp:toUnit>${#TestSuite#toUnit_1}</myp:toUnit>\r
+         <myp:value>${#TestSuite#value_1}</myp:value>\r
+      </myp:convert>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="c3f6bbae-80b7-4363-8f2b-3e1622782e94" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/ConversionServiceImpl/convertRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="f5345c4d-90d8-4f07-b83b-387cd780b2cb" name="TestSuiteParameterStep2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ConversionServiceImplSoapBinding</con:interface><con:operation>convert</con:operation><con:request name="TestSuiteParameterStep2" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="dcea77cf-ab26-400d-8e97-6838dff76213"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/UnitConversion/services/ConversionServiceImpl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:convert>\r
+         <myp:fromUnit>${#TestSuite#fromUnit_2}</myp:fromUnit>\r
+         <myp:toUnit>${#TestSuite#toUnit_2}</myp:toUnit>\r
+         <myp:value>${#TestSuite#value_2}</myp:value>\r
+      </myp:convert>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="edb9232f-aa87-40d8-a086-2bdfaed36a83" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/ConversionServiceImpl/convertRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="fa7eefb4-bbd7-463b-b341-6904fecb993f" name="TestCaseParameterStep1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ConversionServiceImplSoapBinding</con:interface><con:operation>convert</con:operation><con:request name="TestCaseParameterStep1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="cd5a13d0-a095-4d87-be1c-8cf83d1c64c3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/UnitConversion/services/ConversionServiceImpl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:convert>\r
+         <myp:fromUnit>${#TestCase#fromUnit_1}</myp:fromUnit>\r
+         <myp:toUnit>${#TestCase#toUnit_1}</myp:toUnit>\r
+         <myp:value>${#TestCase#value_1}</myp:value>\r
+      </myp:convert>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1be72143-93ce-41e5-a8be-6ad4e4f67781" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/ConversionServiceImpl/convertRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="0d8db113-9fda-4bf7-a366-a8d071397661" name="TestCaseParameterStep2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ConversionServiceImplSoapBinding</con:interface><con:operation>convert</con:operation><con:request name="TestCaseParameterStep2" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="2a5443b3-c0d5-4d0c-8b6c-1afbcf5df984"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/UnitConversion/services/ConversionServiceImpl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:convert>\r
+         <myp:fromUnit>${#TestCase#fromUnit_2}</myp:fromUnit>\r
+         <myp:toUnit>${#TestCase#toUnit_2}</myp:toUnit>\r
+         <myp:value>${#TestCase#value_2}</myp:value>\r
+      </myp:convert>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="079e5380-3c96-4465-8df8-9314df449657" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/ConversionServiceImpl/convertRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="properties" name="Properties" id="a672ffd3-f0ab-416b-bc95-1e4bc3e22d9f"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>fromUnit _1</con:name><con:value>centimeter</con:value></con:property><con:property><con:name>toUnit_1</con:name><con:value>meter</con:value></con:property><con:property><con:name>value_1</con:name><con:value>10000</con:value></con:property><con:property><con:name>fromUnit_2</con:name><con:value>meter</con:value></con:property><con:property><con:name>toUnit_2</con:name><con:value>centimeter</con:value></con:property><con:property><con:name>value_2</con:name><con:value>10</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" id="5e5d549a-c388-4944-858a-b4927985a979" name="TestStepParameterStep1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ConversionServiceImplSoapBinding</con:interface><con:operation>convert</con:operation><con:request name="TestStepParameterStep1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="c6a322c8-dc8c-4fda-8cb1-a7024ffbf72d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/UnitConversion/services/ConversionServiceImpl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:convert>\r
+         <myp:fromUnit>${Properties#fromUnit _1}</myp:fromUnit>\r
+         <myp:toUnit>${Properties#toUnit_1}</myp:toUnit>\r
+         <myp:value>${Properties#value_1}</myp:value>\r
+      </myp:convert>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="a4ba2380-e531-4882-ba84-344a5269542e" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/ConversionServiceImpl/convertRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="b19bbe29-3196-4c38-9647-60677be64b0f" name="TestStepParameterStep2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ConversionServiceImplSoapBinding</con:interface><con:operation>convert</con:operation><con:request name="TestStepParameterStep2" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="9c19a8cd-54b0-4c75-8685-8bd9aaee00ab"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com/UnitConversion/services/ConversionServiceImpl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:myp="http://mypack">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <myp:convert>\r
+         <myp:fromUnit>${Properties#fromUnit_2}</myp:fromUnit>\r
+         <myp:toUnit>${Properties#toUnit_2}</myp:toUnit>\r
+         <myp:value>${Properties#value_2}</myp:value>\r
+      </myp:convert>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="b9190a33-988a-4e61-80f1-5a4957fde1c8" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mypack/ConversionServiceImpl/convertRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>fromUnit_1</con:name><con:value>meter</con:value></con:property><con:property><con:name>toUnit_1</con:name><con:value>millimeter</con:value></con:property><con:property><con:name>value_1</con:name><con:value>15</con:value></con:property><con:property><con:name>fromUnit_2</con:name><con:value>millimeter</con:value></con:property><con:property><con:name>toUnit_2</con:name><con:value>meter</con:value></con:property><con:property><con:name>value_2</con:name><con:value>20000</con:value></con:property></con:properties></con:testCase><con:properties><con:property><con:name>fromUnit_1</con:name><con:value>centimeter</con:value></con:property><con:property><con:name>toUnit_1</con:name><con:value>meter</con:value></con:property><con:property><con:name>value_1</con:name><con:value>1234</con:value></con:property><con:property><con:name>fromUnit_2</con:name><con:value>meter</con:value></con:property><con:property><con:name>toUnit_2</con:name><con:value>centimeter</con:value></con:property><con:property><con:name>value_2</con:name><con:value>1234</con:value></con:property></con:properties></con:testSuite><con:properties><con:property><con:name>fromUnit_1 </con:name><con:value>millimeter</con:value></con:property><con:property><con:name>toUnit_1</con:name><con:value>centimeter</con:value></con:property><con:property><con:name>value_1</con:name><con:value>100</con:value></con:property><con:property><con:name>fromUnit_2</con:name><con:value>centimeter</con:value></con:property><con:property><con:name>toUnit_2</con:name><con:value>millimeter</con:value></con:property><con:property><con:name>value_2</con:name><con:value>10</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
